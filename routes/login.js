@@ -20,7 +20,6 @@ const loginValidators = [
   check('password')
     .exists({ checkFalsy: true })
     .withMessage('Please provide a value for Password'),
-
 ];
 
 router.post('/', csrfProtection, loginValidators, asyncHandler(async (req, res) => {

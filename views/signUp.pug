@@ -10,17 +10,17 @@ include utils.pug
 
 block content
   h1= title
-  p
+  p(id='milk-logo-p')
   +validationErrorSummary(errors)
   div(id='asdfASDF')
     form(action='/signUp' method='post')
       input(type='hidden' name='_csrf' value=csrfToken)
-      input(type='text' name='username' value=user.username placeholder='username' id='username' required)
+      input(type='text' name='username' value=user.username placeholder='username' id='username')
       br
-      input(type='email' name='email' value=user.email placeholder='email' required id='email')
+      input(type='email' name='email' value=user.email placeholder='email' id='email')
       br
-      input(type='password' name='password' placeholder='password' id='password' required)
-      input(type='password' name='confirmPassword' placeholder='confirm password' id='confirm-password' required)
+      input(type='password' name='password' placeholder='password' id='password')
+      input(type='password' name='confirmPassword' placeholder='confirm password' id='confirm-password')
       br
       button(type='submit' id='signUpBtn') Sign Up
     br
