@@ -1,5 +1,4 @@
 window.addEventListener("load", (event) => {
-  // console.log("Member The Milk")
 
   const loginButton = document.getElementById("loginBtn")
   loginButton.addEventListener("click", e => {
@@ -10,7 +9,5 @@ window.addEventListener("load", (event) => {
   signUpButton.addEventListener("click", e => {
     window.location.href = "/signup"
   })
-
-
 
 })

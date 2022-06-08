@@ -43,9 +43,6 @@ router.post('/', requireAuth, asyncHandler(async (req, res) => {
     order: [['createdAt', 'DESC']]
   })
 
-  // console.log("/WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW")
-  // console.log(userId, listId, listCategoryName.name)
-
   //Queurries for tasks
   const tasks = await db.Task.findAll({
     where: { userId },
@@ -73,10 +70,6 @@ router.post('/search', requireAuth, asyncHandler(async (req, res) => {
     order: [['createdAt', 'DESC']]
   })
 
-  console.log('HHHHHHHHHHHHHHHHHHHHHHHHHHHH')
-  console.log(name)
-  console.log(req.body)
-
 
   const searches = await db.Task.findAll({
     where: { userId, name }
@@ -97,29 +90,3 @@ router.get('/logout', (req, res) => {
 
 
 module.exports = router;
-
-
-
-  //! IGNORE BELOW THIS LINE
-  //? Ignore Me
-  // console.log("🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊")
-  // const theThing = Object.keys(lists);
-  // console.log(theThing);
-  // const listId = lists[0].id;
-
-  // for (keys in lists) {
-  //   console.log("🍎🍎🍎🍎🍎")
-  //   console.log(keys);
-  // }
-  // console.log(listId);
-  //? Ignore Me End
-
-  // console.log(...lists);
-
-    // console.log("🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎");
-  // console.log(req.sessionID); // Grabs the sid from Session in DB
-  // const userId = req.session.auth.userId;
-  // const listId = req.session.auth.listId; //Didn't work UNDEFINED
-  // const user = await db.User.findByPk(userId, {
-  //   include: [db.List]
-  // })
