@@ -2,7 +2,8 @@ var express = require('express');
 var router = express.Router();
 const { requireAuth, logoutUser } = require('../auth')
 const { csrfProtection, asyncHandler } = require('./utils');
-const db = require('../db/models')
+const db = require('../db/models');
+const { Sequelize } = require('../db/models');
 // const { Task, List } = require('../db/models')
 
 /* GET application page. */
@@ -72,7 +73,9 @@ router.post('/search', requireAuth, asyncHandler(async (req, res) => {
 
 
   const searches = await db.Task.findAll({
-    where: { userId, name }
+    where: { userId, name: {
+      [Sequelize.Op.iLike]: '%'+name+'%'
+    } }
   })
 
 
