@@ -6,9 +6,7 @@ const { csrfProtection, asyncHandler } = require('./utils');
 
 //* Where we build the list
 router.post('/', asyncHandler(async (req, res) => {
-
     const { name, userId, listId } = req.body;
-    // console.log(req.body)
     const task = await db.Task.build({ name, listId, userId });
     await task.save();
     res.redirect('/application')

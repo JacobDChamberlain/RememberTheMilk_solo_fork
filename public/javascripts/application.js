@@ -1,6 +1,4 @@
 window.addEventListener("load", (event) => {
-  // console.log("hello from application ===> javascript")
-
 
   //* Add Task Functionality
   //Loggingout User
@@ -10,9 +8,6 @@ window.addEventListener("load", (event) => {
   logoutUser.addEventListener("click", e => {
     window.location.href = "/application/logout";
   });
-
-
-
 
 
 }); //? End of application.js

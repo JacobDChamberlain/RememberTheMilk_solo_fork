@@ -10,9 +10,6 @@ router.post('/', asyncHandler(async (req, res) => {
 
   const editTask = await db.Task.findByPk(taskId);
 
-  // console.log('🍊🍊🍊🍊🍊🍊🍊🍊🍊🍊');
-  // console.log(editTask)
-
   //Save is for updating
   await editTask.update({ name })
 
