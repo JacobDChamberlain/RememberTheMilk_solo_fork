@@ -100,14 +100,14 @@ li {
   justify-content: space-evenly;
 }
 
-#addTaskTask {
-  /* visibility: hidden; */
-  /* display: none; */
-}
+/* #addTaskTask {
+  visibility: hidden;
+  display: none;
+} */
 
-#editTaskBtn {
-  /* visibility: hidden; */
-}
+/* #editTaskBtn {
+  visibility: hidden;
+} */
 
 #editTaskSubmitForm {
   /* visibility: hidden; */
@@ -118,9 +118,9 @@ li {
   border: solid 10px;
 }
 
-#editOptionMenu{
-  /* display: none; */
-}
+/* #editOptionMenu{
+  display: none;
+} */
 
 /*
 flex-column-reverse FOR CHECKBOX AND TASK
