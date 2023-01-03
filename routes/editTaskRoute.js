@@ -6,12 +6,17 @@ const { csrfProtection, asyncHandler } = require('./utils');
 //! csrfProtection only when we need to re-render a page don't dlt for bhavik :(
 
 router.post('/', asyncHandler(async (req, res) => {
-  const { name, taskId } = req.body;
+  const { name, description, taskId } = req.body;
 
   const editTask = await db.Task.findByPk(taskId);
 
   //Save is for updating
-  await editTask.update({ name })
+  if (description) {
+    await editTask.update({ name, description })
+  } else {
+    await editTask.update({ name })
+  }
+
 
   res.redirect('/application')
 }))

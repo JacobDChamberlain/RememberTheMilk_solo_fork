@@ -84,12 +84,13 @@ block content
               label(type= 'text' class= 'renameTaskLabel' ) Rename Tasks Below
               form(action="/editTask" method="post" id="editTaskSubmitForm")
                 input(type='text' name= 'name' id='addTaskTask' placeholder= 'rename task here' required)
+                input(type='text' name='description' placeholder='new description')
                 //-
                 //- select(name="listId" required)
                 //-   each list in lists
                 //-     option(name="listId" id='optionListName' value=list.id)= list.name
                 input(type='hidden' name='taskId' value=task.id)
-                button(id='editTaskBtn' type="submit") Rename Task
+                button(id='editTaskBtn' type="submit") Edit Task
               form(action="/deleteTask" method="post" id="deleteTaskForm")
                 input(type='hidden' name='taskId' value=task.id)
                 button(id='deleteTaskBtn' type='submit') Delete Task
