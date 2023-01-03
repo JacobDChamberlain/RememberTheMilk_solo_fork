@@ -52,7 +52,7 @@ h1 {
 #addLiTask {
   margin: 5px;
   margin-bottom: 10px;
-  
+
   /* font-weight: bold; */
   font: bold 14pt "Helvetica", serif;
   /* margin-bottom: 100px; */
@@ -68,6 +68,11 @@ h1 {
   margin-right: 10px;
 }
 
+#taskDescription {
+  font: 12pt "Helvetica", serif;
+  margin-bottom: 0px;
+}
+
 .checkBox {
   margin-left: 5px;
 }
@@ -80,14 +85,14 @@ li {
 #addLiTask:hover {
   box-shadow: 3px 1px 1px  rgba(13, 94, 172);
   /* padding: 5px; */
-  
+
 }
 /* #cancelButton {
-  
+
 }
 
 #submitButton {
-  
+
 } */
 
 #cancelSubmit {
@@ -117,7 +122,7 @@ li {
   /* display: none; */
 }
 
-/* 
+/*
 flex-column-reverse FOR CHECKBOX AND TASK
 */
 
@@ -171,7 +176,7 @@ flex-column-reverse FOR CHECKBOX AND TASK
 #searchBox {
   width:300px;
   height: 40px;
- 
+
 }
 
 #searchBtn{
@@ -353,7 +358,7 @@ flex-column-reverse FOR CHECKBOX AND TASK
 #taskDisplayName {
   margin: 5px;
   margin-bottom: 10px;
-  
+
   /* font-weight: bold; */
   font: 14pt "Helvetica", serif;
   font-weight: 550;
@@ -373,7 +378,7 @@ flex-column-reverse FOR CHECKBOX AND TASK
 #taskDisplayName:hover {
   box-shadow: 5px 2px 2px  rgba(13, 94, 172);
   /* padding: 5px; */
-  
+
 }
 
 
@@ -393,7 +398,7 @@ flex-column-reverse FOR CHECKBOX AND TASK
 #listCategoryNameLabel {
   display: flex;
   flex-direction: center;
-  
+
 }
 
 #currListName{

@@ -64,6 +64,7 @@ block content
         label(for='name' id='addNewTaskLabel') Add Task:
         br
         input(type='text' name='name' id='addTaskInput' placeholder = 'add task ...' required)
+        input(type='text' name='description' id='addTaskDescriptionInput' placeholder='description...')
         select(name="listId" required)
           each list in lists
             option(name="listId" id='optionListName' value=list.id)= list.name
@@ -74,6 +75,8 @@ block content
         if(tasks)
           each task in tasks
             li(id= 'addLiTask')= task.name
+              if task.description
+                p(id='taskDescription')=task.description
               //- input(type='checkbox' name='task' id=`checkBox-${task.id}`)
               //- addTaskTask and editTaskSubmitForm is hidden in css (Our edit/rename)
               br
